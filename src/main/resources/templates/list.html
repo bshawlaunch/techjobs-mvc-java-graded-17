@@ -18,9 +18,13 @@
     </th:block>
   </tr>
   <tr>
-    <!-- TODO #2: Complete the View Jobs By Category Table. -->
 
-    <td></td> <!-- Feel free to remove or modify this element if necessary. -->
+    <!-- TODO #2: Complete the View Jobs By Category Table. -->
+    <td>
+      <li>
+        <a  th:href="@{/list/jobs(column='all')}">View All Jobs</a>
+      </li>
+    </td> <!-- Feel free to remove or modify this element if necessary. -->
 
     <td th:each="category : ${tableChoices}">
       <ul>

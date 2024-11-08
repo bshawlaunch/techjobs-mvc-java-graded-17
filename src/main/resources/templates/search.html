@@ -6,9 +6,8 @@
 
 <div th:replace="~{fragments :: page-header}"></div>
 
-<div class="container body-content">
+<div>
 
-  <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
   <form th:action="@{/search/results}" method = "post">
     <h2>Search by:</h2>
@@ -35,9 +34,14 @@
   </form>
 
   <hr />
+    <div class="container body-content">
+    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
 
+        <div th:replace="~{fragments :: job-list(jobs=${jobs})}"></div>
+
+</div>
 </div>
 
 </body>
